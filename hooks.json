@@ -1,7 +1,7 @@
 [
   {
     "id": "kosongbloghook",
-    "execute-command": "/home/kosong/space/kosong_blog/build.sh",
-    "command-working-directory": "/home/kosong/space/kosong_blog"
+    "execute-command": "/home/kosong/space/kosongblog/build.sh",
+    "command-working-directory": "/home/kosong/space/kosongblog"
   }
 ]
