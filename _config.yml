@@ -79,3 +79,19 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# 文章字数显示设置
+# 依赖服务：https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: true
+  awl: 5
+  wpm: 200
+
+# 本地搜索服务
+search:
+path: search.xml
+field: post
+format: html
+limit: 10000
