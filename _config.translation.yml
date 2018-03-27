@@ -100,7 +100,7 @@ seo: true
 
 # 如果设置为 true, 将会在 index 页面添加 hexo 配置的网站副标题。
 # 副标题: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 
 # ---------------------------------------------------------------
@@ -151,7 +151,7 @@ site_state: true
 # `||` 分隔符之前的值是目标链接。
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 #`||` 分隔符之后的值是FontAwesome icon 的名字。如果Icon（无论有没有分隔符）未定义，会使用 globe icon。
-#社交账号:
+social:
   GitHub: https://github.com/MuffinYu || github
   E-Mail: mailto:muffinxb@163.com || envelope
   #Google: https://plus.google.com/yourname || google
@@ -189,7 +189,7 @@ links_layout: block
 # 侧边栏头像
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /images/avatar.gif
+avatar: /images/avator.jpeg
 
 # 侧边栏表格内容
 toc:
@@ -229,7 +229,7 @@ sidebar:
   b2t: true
 
   # 在 b2t 按钮上显示滚动百分比。
-  scrollpercent: false
+  scrollpercent: true
 
   # 在小屏幕下显示侧边栏 （Muse | Mist 主题下可用）。
   onmobile: false
@@ -243,7 +243,7 @@ sidebar:
 scroll_to_more: true
 
 # 自动保存文章/页面的滚动位置到 cookies 中。
-save_scroll: false
+save_scroll: true
 
 # 在首页自动摘取文章的描述信息作为序言。
 excerpt_description: true
@@ -258,7 +258,7 @@ auto_excerpt:
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
+  updated_at: true
   # 如果文章和创建时不同，只显示更新后内容。
   updated_diff: false
   categories: true
@@ -268,8 +268,8 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
-  awl: 5
+  item_text_total: true
+  awl: 25
   wpm: 200
 
 # 定义代码块的圆角。
@@ -284,15 +284,15 @@ codeblock:
   #description: 比如： 扫描公众号二维码订阅我的博客
 
 # 打赏
-#reward_comment: 点击此处打赏
-#wechatpay: /images/wechatpay.jpg
-#alipay: /images/alipay.jpg
+reward_comment: 赏
+wechatpay: /images/Wechat.jpeg
+alipay: /images/Alipay.jpeg
 #bitcoin: /images/bitcoin.png
 
 # 相关的热点文章
 # 依赖服务: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
+  enable: true
   title: # 通用标题，设置为空，则采用默认值 one
   display_in_home: false
   params:
@@ -304,7 +304,7 @@ related_posts:
 
 # 在文章中声明协议
 post_copyright:
-  enable: false
+  enable: true
   license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a>
 
 
@@ -313,7 +313,7 @@ post_copyright:
 # ---------------------------------------------------------------
 
 # 减少在小屏幕设备上的  padding / margin 间隔值
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # 安卓 Chrome 头部控制面板的颜色 （$brand-bg / $headband-bg => $black-deep）。
 android_chrome_color: "#222"
@@ -333,7 +333,7 @@ custom_logo:
 highlight_theme: normal
 
 # 在 archive 页面启用 "cheers"。
-cheers_enabled: true
+cheers_enabled: false
 
 # 定义最大内容宽度
 # !!目前仅在 Gemini Scheme 下可用
@@ -517,8 +517,8 @@ gitment:
 # 可选值：
 #    button | slide
 # 注意：百度分享不支持 https。
-#baidushare:
-##  type: button
+baidushare:
+  type: button
 
 # 分享
 # 这个插件在中国很有用，但你得知道如何使用它。
@@ -694,19 +694,19 @@ algolia_search:
 # 本地搜索
 # 依赖服务： https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # 如果设为 auto，将会在输入时触发搜索
   # 如果设为 manual，将会在按下 enter 键和搜索按钮时触发搜索
   trigger: auto
   # 显示最符合的文章的数量，设置为 -1 显示所有结果
-  top_n_per_article: 1
+  top_n_per_article: -1
   # 保留 html 字符串为易读的方式
   unescape: false
 
 # 书签服务
 # 依赖服务： https://github.com/theme-next/theme-next-bookmark
 bookmark:
-  enable: false
+  enable: true
   # 如果设置为 auto
   #   - save the reading position when closing the page
   #   - 当页面关闭时保存阅读位置
@@ -750,11 +750,11 @@ tabs:
   border_radius: 0
 
 # 渲染进度条
-# Dependencies: https://github.com/theme-next/theme-next-reading-progress
+# 依赖服务： https://github.com/theme-next/theme-next-reading-progress
 reading_progress:
-  enable: false
+  enable: true
   color: "#37c6c0"
-  height: 2px
+  height: 3px
 
 
 #! ---------------------------------------------------------------
@@ -765,7 +765,7 @@ reading_progress:
 # Use velocity to animate everything.
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # Transition variants:
     # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
